@@ -49,9 +49,45 @@ h1::after{content:"";display:block;width:64px;border-top:3px dashed var(--red);m
 nav button svg{width:22px;height:22px;vertical-align:-5px;margin-right:12px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .gp{display:flex;flex-wrap:wrap;gap:8px;max-height:210px;overflow-y:auto;padding:2px}.gp button{min-height:44px;padding:0 15px;border-radius:99px;border:1px solid var(--line);background:#fff;font:600 15px inherit;color:var(--ink)}.gp button.on{background:var(--ink);color:#fff;border-color:var(--ink)}.gp button.cu{border-style:dashed}
 @media(max-width:760px){nav button svg{display:block;margin:0 auto 2px}nav button{font-size:12px}}
+
+.g3{grid-template-columns:repeat(3,1fr)}
+.qt{display:flex;align-items:center;gap:10px}.qt button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;font:600 22px inherit;color:var(--ink)}
+.rt{width:120px!important}
+.ck{width:28px;height:28px;border-radius:8px;border:2px solid var(--line);display:grid;place-items:center;color:transparent;flex:none;font-weight:700}.ck.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.bar{position:fixed;left:210px;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:12px 24px;display:flex;gap:10px;align-items:center;z-index:4}.bar select{width:auto}
+.bill{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}.bill .tape{height:18px}.bill .bd{padding:16px 18px}.bill table{width:100%;border-collapse:collapse}.bill td{padding:7px 0;border-bottom:1px dashed var(--line)}.bill td:last-child{text-align:right}.bill .tt td{border:0;font-weight:600}
+@media(max-width:760px){.bar{left:0;bottom:calc(64px + env(safe-area-inset-bottom));padding:10px 12px}.g3{grid-template-columns:1fr}}
+
+html{-webkit-text-size-adjust:100%}button,.row,a{touch-action:manipulation}.row:active{background:#F6F8FB}
+.pill.wip{background:#F6E4B5}.pill.kept{background:#CFE8DF;color:#1d5e4e}
+.row.s-wip{border-left-color:var(--brass)}.row.s-kept{border-left-color:var(--green)}
+@media(min-width:760px){body{font-size:18px}.btn{min-height:54px}.pad{max-width:1100px;padding:28px}dialog{width:min(640px,92vw)}}
+@media(min-width:760px) and (max-width:999px){.app{grid-template-columns:112px 1fr}nav{padding:20px 8px}nav .brand{font-size:15px;padding:0 4px 18px;text-align:center}nav button{text-align:center;font-size:14px;padding:12px 4px;min-height:72px}nav button svg{display:block;margin:0 auto 4px}.bar{left:112px}}
+@media(min-width:1000px){#list{display:grid;grid-template-columns:1fr 1fr;column-gap:12px;align-items:start}#list .empty{grid-column:1/-1}}
+
+:root{--chalk:#F5F1EA;--line:#E6DFD3;--sh:0 1px 2px rgba(31,42,68,.06),0 10px 28px rgba(31,42,68,.08)}
+nav{background:linear-gradient(180deg,#1F2A44,#16203A);border-right:3px dashed rgba(242,214,117,.35)}nav button.on{box-shadow:0 4px 14px rgba(242,214,117,.35)}
+h1{font-size:38px;letter-spacing:-.01em}h2{font-size:24px}
+.row{border:0;border-left:6px solid var(--line);border-radius:16px;padding:16px 18px;box-shadow:var(--sh)}
+.row.s-wip{border-left-color:var(--brass)}.row.s-kept{border-left-color:var(--green)}.row.s-delivered{border-left-color:#C9C2B4}
+.stat{border:0;border-radius:20px;box-shadow:var(--sh);padding:18px}.stat span{font-size:13px;letter-spacing:.07em;text-transform:uppercase}.stat .num{font-size:32px}
+.stat.big{background:linear-gradient(135deg,#1F2A44,#2D3E66);padding:26px 26px 44px;border-radius:24px;overflow:hidden}.stat.big .num{font-size:54px}
+.stat.big::after{inset:auto 0 0 0;height:16px;border:0;border-radius:0;background:var(--tape);background-image:repeating-linear-gradient(90deg,var(--ink) 0 1.5px,transparent 1.5px 10px);background-size:100% 8px;background-repeat:repeat-x;background-position:bottom}
+.btn{border-radius:14px;box-shadow:0 6px 16px rgba(31,42,68,.22);background:linear-gradient(180deg,#2A3A60,#1F2A44)}.btn.alt{background:#fff;box-shadow:var(--sh);border:0}.btn.red{background:linear-gradient(180deg,#C63B57,#B5304A)}
+input,select,textarea{border:1.5px solid var(--line);border-radius:14px}input:focus,select:focus{outline:3px solid rgba(184,134,43,.35);border-color:var(--brass)}
+.pill::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:currentColor;margin-right:7px;opacity:.7}
+dialog{border-radius:28px;box-shadow:0 30px 80px rgba(20,28,46,.35)}dialog::backdrop{backdrop-filter:blur(4px)}
+.chips button,.gp button{box-shadow:0 1px 2px rgba(31,42,68,.06)}.warn,.alert{border-radius:16px}
+.alert{background:#FFF3D1;border:1px solid #EBD28C;padding:14px 18px;margin-bottom:14px;font-weight:600}.alert.bad{background:#FBE9EC;border-color:#E7B4BE;color:var(--red)}
+.ph{max-width:100%;max-height:240px;border-radius:14px;margin-top:8px;display:block}.th{width:46px;height:46px;object-fit:cover;border-radius:12px;flex:none}
+.rp{display:grid;grid-template-columns:64px 1fr 110px;gap:12px;align-items:center;margin:10px 0}.rp div{display:grid;gap:4px}.rp i{display:block;height:10px;border-radius:6px;min-width:3px}.rp span{text-align:right;font-weight:600}
+.lg{width:100%;border-collapse:collapse;font-size:15px}.lg td,.lg th{padding:8px 4px;border-bottom:1px dashed var(--line);text-align:left}.lg td:nth-child(n+3),.lg th:nth-child(n+3){text-align:right}.lg .g{color:var(--green)}
+#lock{position:fixed;inset:0;background:var(--ink);z-index:200;display:grid;place-items:center;color:#fff;text-align:center}#lock[hidden]{display:none}#toast{z-index:300}
+.dots i{display:inline-block;width:18px;height:18px;border-radius:50%;border:2px solid var(--tape);margin:0 9px}.dots i.on{background:var(--tape)}
+.kp{display:grid;grid-template-columns:repeat(3,88px);gap:16px;margin:28px 0}.kp button{height:88px;border-radius:50%;border:0;background:rgba(255,255,255,.1);color:#fff;font:600 32px Georgia,serif}
 </style></head><body>
 <div class="app"><nav id="nav"></nav><main><div class="tape"></div><div class="pad" id="main"></div></main></div>
-<dialog id="dlg"></dialog><div id="toast"></div>
+<dialog id="dlg"></dialog><div id="lock" hidden></div><div id="toast"></div>
 <script>
 const $=s=>document.querySelector(s);
 const T={en:{},hi:{}};
@@ -108,7 +144,7 @@ confirm|Are you sure?|पक्का?
 bk_done|Backup ready|बैकअप तैयार
 restored|Data restored|डेटा वापस आ गया
 bad_file|This is not a Stitch Book backup file.|यह Stitch Book की बैकअप फ़ाइल नहीं है।
-need|Please fill name, garment and price.|नाम, कपड़ा और कीमत भरें।
+need|Please fill all required fields.|ज़रूरी जानकारी भरें।
 customer|Customer|ग्राहक
 or_new|Or type a new customer name|या नए ग्राहक का नाम लिखें
 protected|Storage is protected from automatic clearing|स्टोरेज अपने-आप साफ़ होने से सुरक्षित है
@@ -135,6 +171,48 @@ date|Date|तारीख
 custom|Or add your own garment|या अपना कपड़ा जोड़ें
 add|Add|जोड़ें
 mytypes|My garment types|मेरे जोड़े हुए कपड़े
+wip|Pending|बाकी
+kept|Stitched, kept|सिला हुआ, रखा है
+due_today|due today or tomorrow|आज या कल देना है
+edit|Edit order|ऑर्डर बदलें
+photo|Photo (design or fabric)|फोटो (डिज़ाइन या कपड़ा)
+led|Customer ledger|ग्राहक का खाता
+billed|Billed|बिल
+report|Last 6 months (green = received, red = spent, right = profit)|पिछले 6 महीने (हरा = मिला, लाल = खर्च, दाएं = मुनाफ़ा)
+forgot|Forgot PIN?|PIN भूल गए?
+wrong|Wrong PIN or code|गलत PIN या कोड
+rc|Enter your recovery code|अपना रिकवरी कोड लिखें
+newpin|Enter a new 4-digit PIN|नया 4 अंकों का PIN लिखें
+rc_note|Write this recovery code down. You need it if you forget the PIN:|यह रिकवरी कोड लिख लें। PIN भूलने पर यह चाहिए होगा:
+pin|PIN lock|PIN लॉक
+pin_on|PIN lock is on|PIN लॉक चालू है
+pin_off|No PIN set|PIN नहीं लगा है
+set|Set PIN|PIN लगाएं
+change|Change PIN|PIN बदलें
+remove|Remove PIN|PIN हटाएं
+qty|Qty|मात्रा
+rate|Rate|दर
+subtotal|Subtotal|उप-कुल
+paid_full|PAID IN FULL|पूरा भुगतान हुआ
+each|each|प्रति नग
+discount|Discount|छूट
+total|Total|कुल
+c_pend|Garments pending|कपड़े बाकी हैं
+c_kept|Stitched, kept at shop|सिले हुए, दुकान पर रखे
+c_done|Delivered|दे दिए गए
+pcs|pcs|नग
+select|Select|चुनें
+selected|selected|चुने गए
+apply|Apply|लागू करें
+bill|Create bill|बिल बनाएं
+billw|Bill|बिल
+cancel|Cancel|रद्द करें
+one_cust|Select orders of one customer to make a bill.|बिल के लिए एक ही ग्राहक के ऑर्डर चुनें।
+thanks|Thank you!|धन्यवाद!
+shop|Shop details (shown on bills)|दुकान की जानकारी (बिल पर दिखेगी)
+shopname|Shop name|दुकान का नाम
+wa_text|Send bill on WhatsApp|WhatsApp पर बिल भेजें
+wa_img|Share bill as image|बिल इमेज में भेजें
 mytypes_help|Garments you add while making an order appear here.|ऑर्डर बनाते समय जो कपड़े आप जोड़ेंगे वे यहाँ दिखेंगे।`.split('\n').forEach(l=>{const[a,b,c]=l.split('|');T.en[a]=b;T.hi[a]=c});
 let L=localStorage.getItem('sb_lang')||'en';const t=k=>T[L][k]||T.en[k]||k;
 let D={c:[],o:[],e:[],types:[],lastBackup:0};
@@ -149,46 +227,107 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6);
 const cust=id=>D.c.find(c=>c.id===id),ord=id=>D.o.find(o=>o.id===id);
 const paid=o=>o.pay.reduce((s,p)=>s+p.amt,0),bal=o=>o.price-paid(o);
-const ST=['new','cutting','stitching','ready','delivered'],M=['bust','waist','hip','shoulder','sleeve','length','neck','armhole'],CAT=['fab','thr','wag','rent','elec','oth'];
+const ST=['wip','kept','delivered'],M=['bust','waist','hip','shoulder','sleeve','length','neck','armhole'],CAT=['fab','thr','wag','rent','elec','oth'];
 const GT=[['Blouse','ब्लाउज़'],['Salwar suit','सलवार सूट'],['Kurti','कुर्ती'],['Lehenga','लहंगा'],['Petticoat','पेटीकोट'],['Saree fall and pico','साड़ी फॉल-पीको'],['Alteration','अल्टरेशन'],['Anarkali','अनारकली'],['Churidar','चूड़ीदार'],['Palazzo','पलाज़ो'],['Patiala salwar','पटियाला सलवार'],['Punjabi suit','पंजाबी सूट'],['Sharara','शरारा'],['Choli','चोली'],['Dupatta','दुपट्टा'],['Gown','गाउन'],['Maxi dress','मैक्सी ड्रेस'],['Nighty','नाइटी'],['Skirt','स्कर्ट'],['Top','टॉप'],['Pant or trouser','पैंट/ट्राउज़र'],['Jacket or shrug','जैकेट/श्रग'],['Designer blouse','डिज़ाइनर ब्लाउज़'],['Bridal blouse','दुल्हन ब्लाउज़'],['School uniform','स्कूल यूनिफ़ॉर्म'],['Lining','अस्तर']];
 const gname=x=>{if(L!=='hi')return x;const g=GT.find(y=>y[0]===x);return g?g[1]:x};
-const types=()=>[...GT.map(g=>g[0]),...(D.types||[]).filter(x=>!GT.some(g=>g[0]===x))];
-let selItem='';
-function drawGp(){const e=$('#gp');if(!e)return;e.innerHTML=types().map(x=>{const cu=(D.types||[]).includes(x);return `<button class="${x===selItem?'on':''} ${cu?'cu':''}" data-x="${esc(x)}">${esc(gname(x))}</button>`}).join('')}
-function addType(){const v=$('#ci').value.trim();if(!v)return;D.types=D.types||[];let m=types().find(x=>x.toLowerCase()===v.toLowerCase());if(!m){D.types.push(v);m=v}selItem=m;$('#ci').value='';drawGp();save()}
+const SHOWN=['Blouse','Salwar suit','Kurti','Lehenga','Petticoat','Saree fall and pico','Alteration','Gown','Palazzo','Dupatta'];
+const types=()=>[...SHOWN,...(D.types||[]).filter(x=>!SHOWN.includes(x))];
+let cart=[];
+function drawGp(){const e=$('#gp');if(!e)return;e.innerHTML=types().map(x=>{const cu=(D.types||[]).includes(x);return `<button class="${cart.some(i=>i.n===x)?'on':''} ${cu?'cu':''}" data-x="${esc(x)}">${esc(gname(x))}</button>`}).join('')}
+function addType(){const v=$('#ci').value.trim();if(!v)return;D.types=D.types||[];let m=types().find(x=>x.toLowerCase()===v.toLowerCase());if(!m){D.types.push(v);m=v}addCart(m);$('#ci').value='';save()}
 async function delType(i){if(!confirm(t('confirm')))return;D.types.splice(i,1);await commit()}
-$('#dlg').addEventListener('click',e=>{const b=e.target.closest('#gp button');if(b){selItem=b.dataset.x;drawGp()}});
+$('#dlg').addEventListener('click',e=>{const b=e.target.closest('#gp button');if(b)addCart(b.dataset.x)});
 const AVC=['#B5304A','#2F7D6B','#4C6FBF','#B8862B','#7A4E9C','#1F2A44'];
 const av=n=>{let h=0;for(const c of n)h=(h*31+c.charCodeAt(0))%997;return `<div class="av" style="background:${AVC[h%6]}">${esc([...n.trim()][0]||'?').toUpperCase()}</div>`};
+const VER=4,SMAP={new:'wip',cutting:'wip',stitching:'wip',ready:'kept'};
+function migrate(){D.types=D.types||[];D.shop=D.shop||{};D.o.forEach(o=>{if(!o.items)o.items=[{n:o.item||'Garment',q:1,r:o.price}];if(o.disc==null)o.disc=0;if(SMAP[o.status])o.status=SMAP[o.status]});D.ver=VER}
+const subt=o=>o.items.reduce((a,i)=>a+i.q*i.r,0),pcs=o=>o.items.reduce((a,i)=>a+i.q,0);
+const oName=o=>o.items.map(i=>gname(i.n)+(i.q>1?' ×'+i.q:'')).join(', ');
+const fix=o=>{o.price=Math.max(0,subt(o)-(o.disc||0))};
+const PC=l=>D.o.filter(o=>l.includes(o.status)).reduce((a,o)=>a+pcs(o),0);
+const pcsBy=k=>D.o.filter(o=>k==='all'||o.status===k).reduce((a,o)=>a+pcs(o),0);
+const smOn=()=>selMode&&tab==='orders';
+function addCart(n){const i=cart.find(x=>x.n===n);if(i)i.q++;else cart.push({n,q:1,r:0});drawGp();drawCart()}
+function cq(i,d){cart[i].q=Math.max(1,cart[i].q+d);drawCart()}
+function cr(i,v){cart[i].r=+v||0;totUpd()}
+function cx(i){cart.splice(i,1);drawGp();drawCart()}
+function totUpd(){const e=$('#ct');if(e)e.textContent=money(Math.max(0,cart.reduce((a,i)=>a+i.q*i.r,0)-(+(($('#ox')||{}).value)||0)))}
+function drawCart(){const e=$('#cart');if(!e)return;e.innerHTML=cart.map((i,k)=>`<div class="row" style="flex-wrap:wrap"><b>${esc(gname(i.n))}</b><div class="qt"><button onclick="cq(${k},-1)">−</button><b>${i.q}</b><button onclick="cq(${k},1)">+</button></div><input class="rt" type="number" inputmode="numeric" placeholder="₹ ${t('each')}" value="${i.r||''}" oninput="cr(${k},this.value)"><button class="btn alt sm" onclick="cx(${k})">✕</button></div>`).join('');totUpd()}
+const shopName=()=>(D.shop&&D.shop.name)||'Tailoring';
+const barH=()=>selMode?`<div style="height:80px"></div><div class="bar"><b>${sel.size} ${t('selected')}</b><select id="bs">${ST.map(x=>`<option value="${x}">${t(x)}</option>`).join('')}</select><button class="btn sm" onclick="bulkSt()">${t('apply')}</button><button class="btn sm" onclick="billSel()">${t('bill')}</button></div>`:'';
+function togMode(){selMode=!selMode;sel=new Set();render()}
+function togSel(id){sel.has(id)?sel.delete(id):sel.add(id);$('#list').innerHTML=LIST.orders();$('#bar').innerHTML=barH()}
+async function bulkSt(){if(!sel.size)return;const v=$('#bs').value;sel.forEach(id=>{ord(id).status=v});selMode=false;sel=new Set();await commit()}
+function billSel(){if(!sel.size)return;billFor([...sel])}
+function billFor(ids){const os=ids.map(ord).filter(Boolean);if(new Set(os.map(o=>o.cid)).size>1)return toast(t('one_cust'));billSheet(ids)}
+function billData(ids){const os=ids.map(ord).filter(Boolean),c=cust(os[0].cid);D.bn=D.bn||0;if(!os[0].bill){os[0].bill=++D.bn;save()}
+ const lines=os.flatMap(o=>o.items),sub=os.reduce((a,o)=>a+subt(o),0),disc=os.reduce((a,o)=>a+(o.disc||0),0),pd=os.reduce((a,o)=>a+paid(o),0);
+ return{c,no:os[0].bill,lines,disc,tot:sub-disc,pd,bal:sub-disc-pd}}
+function billText(b){const l=b.lines.map(x=>`${gname(x.n)} × ${x.q}`+(x.r?` @ ${money(x.r)} = ${money(x.q*x.r)}`:'')).join('\n');
+ return `*${shopName()}*\n${(D.shop||{}).phone||''}\n${t('billw')} #${b.no}, ${dfmt(today())}\n${t('customer')}: ${b.c.name}\n------------------\n${l}\n------------------\n`+(b.disc>0?`${t('discount')}: -${money(b.disc)}\n`:'')+`${t('total')}: ${money(b.tot)}\n${t('paid')}: ${money(b.pd)}\n*${t('balance')}: ${money(b.bal)}*\n\n${t('thanks')}`}
+function billSheet(ids){const b=billData(ids),ph=(b.c.phone||'').replace(/\D/g,'').slice(-10),url='https://wa.me/'+(ph?'91'+ph:'')+'?text='+encodeURIComponent(billText(b));
+ sheet(`<img src="${drawBill(b).toDataURL('image/png')}" style="width:100%;border-radius:14px;box-shadow:var(--sh)">
+ <div class="grid g2" style="margin-top:14px"><a class="btn" style="display:grid;place-items:center;text-decoration:none" href="${url}" target="_blank">${t('wa_text')}</a><button class="btn alt" onclick="shareImg('${ids.join(',')}')">${t('wa_img')}</button></div><p><button class="btn alt" style="width:100%" onclick="shut()">${t('close')}</button></p>`)}
+function drawBill(b){const W=800,n=b.lines.length,sub=b.tot+b.disc,rows=2+(b.disc>0?2:0),H=584+52*n+rows*44,cv=document.createElement('canvas');cv.width=W;cv.height=H;const x=cv.getContext('2d'),ink='#1F2A44',mu='#667089',tp='#F2D675';
+ const T=(s,px,y,o={})=>{x.font=(o.w||400)+' '+(o.s||24)+'px '+(o.f||'-apple-system,Helvetica,sans-serif');x.fillStyle=o.c||ink;x.textAlign=o.a||'left';x.fillText(s,px,y)},RR=(px,y,w,h,r,c)=>{x.fillStyle=c;x.beginPath();if(x.roundRect)x.roundRect(px,y,w,h,r);else x.rect(px,y,w,h);x.fill()};
+ x.fillStyle='#fff';x.fillRect(0,0,W,H);x.fillStyle=ink;x.fillRect(0,0,W,170);x.fillStyle=tp;x.fillRect(0,148,W,22);x.fillStyle=ink;for(let i=0;i<W;i+=12){const l=i%60===0;x.fillRect(i,l?148:156,2,l?22:14)}
+ T(shopName(),44,76,{s:46,w:600,f:'Georgia,serif',c:'#fff'});T((D.shop||{}).phone||'',44,114,{c:tp,s:22});
+ T(t('billw').toUpperCase(),W-44,50,{a:'right',s:20,c:tp,w:600});T('#'+b.no,W-44,94,{a:'right',s:42,w:600,c:'#fff',f:'Georgia,serif'});T(dfmt(today()),W-44,124,{a:'right',s:20,c:'#C9D1E3'});
+ T(t('customer').toUpperCase(),44,214,{s:18,c:mu,w:600});T(b.c.name,44,254,{s:32,w:600});if(b.c.phone)T(b.c.phone,44,286,{c:mu,s:22});
+ RR(36,312,W-72,52,12,'#EDF0F3');const H2={s:18,c:mu,w:600};T(t('item'),52,345,H2);T(t('qty'),470,345,{...H2,a:'center'});T(t('rate'),610,345,{...H2,a:'right'});T(t('amount'),W-52,345,{...H2,a:'right'});
+ let y=364;b.lines.forEach((l,i)=>{if(i%2)RR(36,y,W-72,52,0,'#F8F9FB');T(gname(l.n),52,y+34);T(String(l.q),470,y+34,{a:'center'});T(money(l.r),610,y+34,{a:'right',c:mu});T(money(l.q*l.r),W-52,y+34,{a:'right',w:600});y+=52});
+ y+=20;const R2=(a,v,o={})=>{T(a,470,y+28,{c:mu,...o});T(v,W-52,y+28,{...o,a:'right',c:o.c||ink});y+=44};
+ if(b.disc>0){R2(t('subtotal'),money(sub));R2(t('discount'),'−'+money(b.disc),{c:'#B5304A'})}R2(t('total'),money(b.tot),{w:600,s:28});R2(t('paid'),money(b.pd),{c:'#2F7D6B'});
+ y+=10;const due=b.bal>0;RR(36,y,W-72,84,16,due?'#B5304A':'#2F7D6B');T(due?t('balance'):t('paid_full'),64,y+52,{s:26,w:600,c:'#fff'});if(due)T(money(b.bal),W-64,y+56,{a:'right',s:40,w:600,c:'#fff',f:'Georgia,serif'});else T('✓',W-64,y+58,{a:'right',s:44,c:'#fff'});
+ x.setLineDash([6,6]);x.strokeStyle='#D8DDE6';x.lineWidth=2;x.beginPath();x.moveTo(44,y+120);x.lineTo(W-44,y+120);x.stroke();T(t('thanks'),W/2,y+160,{a:'center',s:26,c:mu,f:'Georgia,serif'});return cv}
+function shareImg(s){const b=billData(s.split(','));drawBill(b).toBlob(async bl=>{const f=new File([bl],'bill-'+b.no+'.png',{type:'image/png'});if(navigator.canShare&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f],text:b.c.name})}catch(e){}}else{const a=document.createElement('a');a.href=URL.createObjectURL(bl);a.download=f.name;a.click()}})}
+function ledgerSheet(id){const c=cust(id),os=D.o.filter(o=>o.cid===id),r=[];os.forEach(o=>{r.push({d:o.created||o.due||'',x:oName(o),a:o.price});o.pay.forEach(p=>r.push({d:p.d,x:t('paid'),a:-p.amt}))});r.sort((a,b)=>a.d.localeCompare(b.d));let bl=0;const bi=os.reduce((a,o)=>a+o.price,0),pd=os.reduce((a,o)=>a+paid(o),0);
+ sheet(`<h2>${esc(c.name)}</h2><div class="grid g3"><div class="stat"><span>${t('billed')}</span><b class="num serif">${money(bi)}</b></div><div class="stat"><span>${t('paid')}</span><b class="num serif" style="color:var(--green)">${money(pd)}</b></div><div class="stat"><span>${t('balance')}</span><b class="num serif" style="color:var(--red)">${money(bi-pd)}</b></div></div>
+ <div style="overflow-x:auto;margin-top:12px"><table class="lg"><tr><th>${t('date')}</th><th></th><th>${t('billed')}</th><th>${t('paid')}</th><th>${t('balance')}</th></tr>${r.map(e=>{bl+=e.a;return `<tr><td>${dfmt(e.d)}</td><td>${esc(e.x)}</td><td>${e.a>0?money(e.a):''}</td><td class="g">${e.a<0?money(-e.a):''}</td><td>${money(bl)}</td></tr>`}).join('')}</table></div>
+ <div class="grid g2" style="margin-top:14px">${os.length?`<button class="btn" onclick="shut();billFor([${os.map(o=>`'${o.id}'`).join(',')}])">${t('bill')}</button>`:'<span></span>'}<button class="btn alt" onclick="custSheet('${id}')">${t('close')}</button></div>`)}
+function report(){const ms=[];for(let i=5;i>=0;i--){const d=new Date();d.setDate(1);d.setMonth(d.getMonth()-i);ms.push(dstr(d).slice(0,7))}
+ const inc=m=>D.o.flatMap(o=>o.pay).filter(p=>p.d.startsWith(m)).reduce((a,p)=>a+p.amt,0),exp=m=>D.e.filter(e=>e.d.startsWith(m)).reduce((a,e)=>a+e.amt,0),mx=Math.max(1,...ms.flatMap(m=>[inc(m),exp(m)]));
+ return ms.map(m=>{const a=inc(m),b=exp(m);return `<div class="rp"><b>${new Date(m+'-01T00:00').toLocaleDateString(L==='hi'?'hi-IN':'en-IN',{month:'short',year:'2-digit'})}</b><div><i style="width:${a/mx*100}%;background:var(--green)"></i><i style="width:${b/mx*100}%;background:var(--red)"></i></div><span style="color:${a-b<0?'var(--red)':'var(--green)'}">${money(a-b)}</span></div>`}).join('')}
+const hp=async p=>{try{const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('sb'+p));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}catch(e){return 'x'+btoa(p)}};
+let pinBuf='',hid=0;
+function lock(){if(!localStorage.getItem('sb_pin'))return;pinBuf='';$('#lock').hidden=false;drawPin()}
+function drawPin(){$('#lock').innerHTML=`<div><h2 class="serif" style="font-size:34px">${esc(shopName()==='Tailoring'?'Stitch Book':shopName())}</h2><div class="dots" style="margin-top:22px">${[0,1,2,3].map(i=>`<i class="${i<pinBuf.length?'on':''}"></i>`).join('')}</div><div class="kp">${[1,2,3,4,5,6,7,8,9,'',0,'⌫'].map(k=>`<button ${k===''?'disabled style="visibility:hidden"':''} onclick="pk('${k}')">${k}</button>`).join('')}</div><button class="btn alt sm" onclick="forgot()">${t('forgot')}</button></div>`}
+async function pk(k){if(k==='⌫')pinBuf=pinBuf.slice(0,-1);else if(pinBuf.length<4)pinBuf+=k;drawPin();if(pinBuf.length===4){if(await hp(pinBuf)===localStorage.getItem('sb_pin')){$('#lock').hidden=true;pinBuf=''}else{pinBuf='';toast(t('wrong'));drawPin()}}}
+async function forgot(){const c=prompt(t('rc'));if(!c)return;if(await hp(c.trim())===localStorage.getItem('sb_rc')){localStorage.removeItem('sb_pin');$('#lock').hidden=true;render()}else toast(t('wrong'))}
+async function setPin(){const p=prompt(t('newpin'));if(!/^\d{4}$/.test(p||''))return;localStorage.setItem('sb_pin',await hp(p));const rc=String(Math.floor(1e5+Math.random()*9e5));localStorage.setItem('sb_rc',await hp(rc));alert(t('rc_note')+' '+rc);render()}
+function rmPin(){if(confirm(t('confirm'))){localStorage.removeItem('sb_pin');render()}}
+document.addEventListener('visibilitychange',()=>{if(document.hidden)hid=Date.now();else if(hid&&Date.now()-hid>6e4)lock()});
+function setShop(){D.shop={name:val('sn'),phone:val('sp')};save()}
 const ICON={home:'<svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>',orders:'<svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v3H9zM9 12h6M9 16h6"/></svg>',customers:'<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 15-5 16 0"/></svg>',money:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 8h6M9 11.5h6M10 8c4 0 4 5 0 5l4 4"/></svg>',settings:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>'};
-async function save(){const s=JSON.stringify(D);try{localStorage.setItem('sb_mirror',s)}catch(e){}await idbSet('db',s);
- const sn=(await idbGet('snap'))||[],day=today(),i=sn.findIndex(x=>x.day===day);if(i>=0)sn[i]={day,data:s};else sn.push({day,data:s});while(sn.length>10)sn.shift();await idbSet('snap',sn)}
+async function save(){const s=JSON.stringify(D),sl=JSON.stringify(D,(k,v)=>k==='photo'?undefined:v);try{localStorage.setItem('sb_mirror',sl)}catch(e){}await idbSet('db',s);
+ const sn=(await idbGet('snap'))||[],day=today(),i=sn.findIndex(x=>x.day===day);if(i>=0)sn[i]={day,data:sl};else sn.push({day,data:sl});while(sn.length>10)sn.shift();await idbSet('snap',sn)}
 const commit=async()=>{await save();render()};
 function toast(m){const e=$('#toast');e.textContent=m;e.classList.add('on');setTimeout(()=>e.classList.remove('on'),2200)}
 const sheet=h=>{$('#dlg').innerHTML=h;if(!$('#dlg').open)$('#dlg').showModal()},shut=()=>$('#dlg').close();
-let tab='home',q='',flt='all';
+let tab='home',q='',flt='all',selMode=false,sel=new Set();
 const TABS=['home','orders','customers','money','settings'];
-function go(x){tab=x;q='';flt='all';render()}
-function render(){document.documentElement.lang=L;
+function go(x){tab=x;q='';flt='all';selMode=false;sel=new Set();render()}
+function render(){migrate();document.documentElement.lang=L;
  $('#nav').innerHTML='<div class="brand serif">Stitch Book</div>'+TABS.map(x=>`<button class="${x===tab?'on':''}" onclick="go('${x}')">${ICON[x]}${t(x)}</button>`).join('');
  $('#main').innerHTML=V[tab]()}
 const V={};
 V.home=()=>{const m=today().slice(0,7),open=D.o.filter(o=>o.status!=='delivered');
  const pend=D.o.reduce((s,o)=>s+Math.max(0,bal(o)),0),inc=D.o.flatMap(o=>o.pay).filter(p=>p.d.startsWith(m)).reduce((s,p)=>s+p.amt,0),sp=D.e.filter(e=>e.d.startsWith(m)).reduce((s,e)=>s+e.amt,0);
  const soon=open.filter(o=>o.due&&o.due<=addDays(7)).sort((a,b)=>a.due.localeCompare(b.due));
- return `${bkWarn()}<div class="top"><h1>${t('home')}</h1><button class="btn" onclick="orderForm()">+ ${t('add_order')}</button></div>
+ const od=open.filter(o=>o.due&&o.due<today()).length,dt=open.filter(o=>o.due===today()||o.due===addDays(1)).length,dl=new Date().toLocaleDateString(L==='hi'?'hi-IN':'en-IN',{weekday:'long',day:'numeric',month:'long'});
+ return `${bkWarn()}${od||dt?`<div class="alert ${od?'bad':''}" onclick="go('orders')">${od?`${od} ${t('overdue')}. `:''}${dt?`${dt} ${t('due_today')}`:''}</div>`:''}<div class="top"><div><h1>${t('home')}</h1><div class="sub">${dl}</div></div><button class="btn" onclick="orderForm()">+ ${t('add_order')}</button></div>
  <div class="grid g4"><div class="stat big"><span>${t('pending')}</span><b class="num serif">${money(pend)}</b></div>
  <div class="stat"><span>${t('income')}</span><b class="num serif" style="color:var(--green)">${money(inc)}</b></div>
  <div class="stat"><span>${t('spent')}</span><b class="num serif" style="color:var(--red)">${money(sp)}</b></div></div>
- <h2>${t('dueweek')}</h2>${soon.map(oRow).join('')||`<div class="empty">${t('nothing')}</div>`}`};
+ <div class="grid g3" style="margin-top:12px"><div class="stat"><span>${t('c_pend')}</span><b class="num serif">${PC(['wip'])}</b></div><div class="stat"><span>${t('c_kept')}</span><b class="num serif" style="color:var(--green)">${PC(['kept'])}</b></div><div class="stat"><span>${t('c_done')}</span><b class="num serif">${PC(['delivered'])}</b></div></div><h2>${t('dueweek')}</h2>${soon.map(oRow).join('')||`<div class="empty">${t('nothing')}</div>`}`};
 const bkWarn=()=>(D.o.length||D.c.length)&&Date.now()-D.lastBackup>7*864e5?`<div class="warn"><span>${t('bk_warn')}</span><button class="btn red sm" onclick="backup()">${t('backup_now')}</button></div>`:'';
 const oRow=o=>{const c=cust(o.cid),b=bal(o),late=o.status!=='delivered'&&o.due&&o.due<today();
- return `<div class="row s-${o.status}" onclick="openOrder('${o.id}')"><div><b>${esc(gname(o.item))}</b><div class="sub">${esc(c?.name)}</div></div><div class="r"><span class="pill ${o.status}">${t(o.status)}</span><div class="sub ${late?'late':''}">${dfmt(o.due)}${late?' ('+t('overdue')+')':''}</div><div class="sub">${b>0?t('balance')+' '+money(b):'✓'}</div></div></div>`};
+ return `<div class="row s-${o.status}" onclick="${smOn()?`togSel('${o.id}')`:`openOrder('${o.id}')`}">${smOn()?`<span class="ck ${sel.has(o.id)?'on':''}">✓</span>`:''}${o.photo?`<img class="th" src="${o.photo}">`:''}<div style="flex:1"><b>${esc(oName(o))}</b><div class="sub">${esc(c?.name)}, ${pcs(o)} ${t('pcs')}</div></div><div class="r"><span class="pill ${o.status}">${t(o.status)}</span><div class="sub ${late?'late':''}">${dfmt(o.due)}${late?' ('+t('overdue')+')':''}</div><div class="sub">${b>0?t('balance')+' '+money(b):'✓'}</div></div></div>`};
 const sBox=()=>`<input placeholder="${t('search')}" value="${esc(q)}" oninput="q=this.value;$('#list').innerHTML=LIST[tab]()">`;
 const LIST={};
-LIST.orders=()=>{const k=q.toLowerCase(),l=D.o.filter(o=>(flt==='all'||o.status===flt)&&(!k||(o.item+(cust(o.cid)?.name||'')+(o.fabric||'')).toLowerCase().includes(k))).sort((a,b)=>(a.status==='delivered')-(b.status==='delivered')||(a.due||'9').localeCompare(b.due||'9'));return l.map(oRow).join('')||`<div class="empty">${t('nothing')}</div>`};
-V.orders=()=>`<div class="top"><h1>${t('orders')}</h1><button class="btn" onclick="orderForm()">+ ${t('add_order')}</button></div>${sBox()}
- <div class="chips">${['all',...ST].map(s=>`<button class="${flt===s?'on':''}" onclick="flt='${s}';render()">${t(s)}</button>`).join('')}</div><div id="list">${LIST.orders()}</div>`;
+LIST.orders=()=>{const k=q.toLowerCase(),l=D.o.filter(o=>(flt==='all'||o.status===flt)&&(!k||(oName(o)+(cust(o.cid)?.name||'')+(o.fabric||'')).toLowerCase().includes(k))).sort((a,b)=>(a.status==='delivered')-(b.status==='delivered')||(a.due||'9').localeCompare(b.due||'9'));return l.map(oRow).join('')||`<div class="empty">${t('nothing')}</div>`};
+V.orders=()=>`<div class="top"><h1>${t('orders')}</h1><div style="display:flex;gap:8px"><button class="btn alt" onclick="togMode()">${selMode?t('cancel'):t('select')}</button><button class="btn" onclick="orderForm()">+ ${t('add_order')}</button></div></div>${sBox()}
+ <div class="chips">${['all',...ST].map(s=>`<button class="${flt===s?'on':''}" onclick="flt='${s}';render()">${t(s)} (${pcsBy(s)})</button>`).join('')}</div><div id="list">${LIST.orders()}</div><div id="bar">${barH()}</div>`;
 const cBal=id=>D.o.filter(o=>o.cid===id).reduce((s,o)=>s+Math.max(0,bal(o)),0);
 LIST.customers=()=>{const k=q.toLowerCase(),l=D.c.filter(c=>!k||(c.name+c.phone).toLowerCase().includes(k)).sort((a,b)=>a.name.localeCompare(b.name));
  return l.map(c=>`<div class="row" onclick="custSheet('${c.id}')"><div style="display:flex;gap:12px;align-items:center">${av(c.name)}<div><b>${esc(c.name)}</b><div class="sub">${esc(c.phone)}</div></div></div><div class="r">${cBal(c.id)>0?`<b style="color:var(--red)">${money(cBal(c.id))}</b>`:''}</div></div>`).join('')||`<div class="empty">${t('nothing')}</div>`};
@@ -196,13 +335,13 @@ V.customers=()=>`<div class="top"><h1>${t('customers')}</h1><button class="btn" 
 V.money=()=>{const m=today().slice(0,7),sp=D.e.filter(e=>e.d.startsWith(m)).reduce((s,e)=>s+e.amt,0),inc=D.o.flatMap(o=>o.pay).filter(p=>p.d.startsWith(m)).reduce((s,p)=>s+p.amt,0);
  return `<div class="top"><h1>${t('money')}</h1><button class="btn" onclick="expForm()">+ ${t('add_exp')}</button></div>
  <div class="grid g2"><div class="stat"><span>${t('income')}</span><b class="num serif" style="color:var(--green)">${money(inc)}</b></div><div class="stat"><span>${t('spent')}</span><b class="num serif" style="color:var(--red)">${money(sp)}</b></div></div>
- <h2 style="margin-top:22px">${t('spent')}</h2>
+ <h2>${t('money')}</h2><div class="sub">${t('report')}</div>${report()}<h2 style="margin-top:22px">${t('spent')}</h2>
  ${[...D.e].sort((a,b)=>b.d.localeCompare(a.d)).map(e=>`<div class="row"><div><b>${t(e.cat)}</b><div class="sub">${dfmt(e.d)} ${esc(e.note)}</div></div><div class="r"><b>${money(e.amt)}</b><div><button class="btn alt sm" onclick="delExp('${e.id}')">${t('delete')}</button></div></div></div>`).join('')||`<div class="empty">${t('nothing')}</div>`}`};
 V.settings=()=>{const lb=D.lastBackup?new Date(D.lastBackup).toLocaleString():t('never');
  return `<h1>${t('settings')}</h1><h2>${t('lang')}</h2><div class="chips"><button class="${L==='en'?'on':''}" onclick="setL('en')">English</button><button class="${L==='hi'?'on':''}" onclick="setL('hi')">हिन्दी</button></div>
- <h2>Backup</h2><div class="stat"><div class="sub">${t('last_bk')}: <b>${lb}</b></div><p class="sub">${t('bk_help')}</p><div class="grid g2"><button class="btn" onclick="backup()">${t('backup_now')}</button><button class="btn alt" onclick="$('#rf').click()">${t('restore')}</button></div><input id="rf" type="file" accept=".json,application/json" hidden onchange="restoreFile(this.files[0])"><p class="sub" id="pst"></p></div>
+ <h2>${t('shop')}</h2>${F('sn',t('shopname'),(D.shop||{}).name,'text','onchange="setShop()"')}${F('sp',t('phone'),(D.shop||{}).phone,'tel','onchange="setShop()"')}<h2>${t('pin')}</h2><div class="stat"><div class="sub">${localStorage.getItem('sb_pin')?t('pin_on'):t('pin_off')}</div><div class="grid g2" style="margin-top:10px"><button class="btn" onclick="setPin()">${localStorage.getItem('sb_pin')?t('change'):t('set')}</button>${localStorage.getItem('sb_pin')?`<button class="btn alt" onclick="rmPin()">${t('remove')}</button>`:'<span></span>'}</div></div><h2>Backup</h2><div class="stat"><div class="sub">${t('last_bk')}: <b>${lb}</b></div><p class="sub">${t('bk_help')}</p><div class="grid g2"><button class="btn" onclick="backup()">${t('backup_now')}</button><button class="btn alt" onclick="$('#rf').click()">${t('restore')}</button></div><input id="rf" type="file" accept=".json,application/json" hidden onchange="restoreFile(this.files[0])"><p class="sub" id="pst"></p></div>
  <h2>${t('mytypes')}</h2>${(D.types||[]).map((x,i)=>`<div class="row"><b>${esc(x)}</b><button class="btn alt sm" onclick="delType(${i})">${t('delete')}</button></div>`).join('')||`<div class="sub">${t('mytypes_help')}</div>`}<h2>${t('autocopies')}</h2><div id="snaps"></div>`};
-async function afterSettings(){if(tab!=='settings')return;const sn=(await idbGet('snap'))||[];const e=$('#snaps');if(e)e.innerHTML=[...sn].reverse().map(s=>{let n='';try{const d=JSON.parse(s.data);n=d.o.length+' '+t('orders')+', '+d.c.length+' '+t('customers')}catch(x){}return `<div class="row"><div><b>${esc(s.day.startsWith('pre')?'Before restore':dfmt(s.day))}</b><div class="sub">${n}</div></div><button class="btn alt sm" onclick="restoreSnap('${s.day}')">${t('use')}</button></div>`}).join('');
+async function afterSettings(){if(tab!=='settings')return;const sn=(await idbGet('snap'))||[];const e=$('#snaps');if(e)e.innerHTML=[...sn].reverse().map(s=>{let n='';try{const d=JSON.parse(s.data);n=d.o.length+' '+t('orders')+', '+d.c.length+' '+t('customers')}catch(x){}return `<div class="row"><div><b>${esc(s.day.startsWith('pre')?'Safety copy (before update or restore)':dfmt(s.day))}</b><div class="sub">${n}</div></div><button class="btn alt sm" onclick="restoreSnap('${s.day}')">${t('use')}</button></div>`}).join('');
  const p=navigator.storage&&navigator.storage.persisted?await navigator.storage.persisted():false;const pe=$('#pst');if(pe)pe.textContent=p?'✓ '+t('protected'):t('notprot')}
 const _r=render;render=function(){_r();afterSettings()};
 function setL(x){L=x;localStorage.setItem('sb_lang',x);render()}
@@ -210,34 +349,41 @@ const F=(id,lab,v='',type='text',extra='')=>`<label>${lab}</label><input id="${i
 const val=id=>$('#'+id).value.trim();
 function custForm(){sheet(`<h2>${t('add_cust')}</h2>${F('cn',t('name'))}${F('cp',t('phone'),'','tel')}<div class="grid g2" style="margin-top:18px"><button class="btn alt" onclick="shut()">${t('close')}</button><button class="btn" onclick="saveCust()">${t('save')}</button></div>`)}
 async function saveCust(){if(!val('cn'))return toast(t('need'));D.c.push({id:uid(),name:val('cn'),phone:val('cp'),meas:[]});shut();await commit()}
-function orderForm(cid=''){selItem='';setTimeout(drawGp,0);sheet(`<h2>${t('add_order')}</h2><label>${t('customer')}</label><select id="oc"><option value=""></option>${[...D.c].sort((a,b)=>a.name.localeCompare(b.name)).map(c=>`<option value="${c.id}" ${c.id===cid?'selected':''}>${esc(c.name)}</option>`).join('')}</select>
- ${F('on',t('or_new'))}<label>${t('item')}</label><div class="gp" id="gp"></div><div style="display:grid;grid-template-columns:1fr auto;gap:10px;margin-top:10px"><input id="ci" placeholder="${t('custom')}"><button class="btn alt" onclick="addType()">+ ${t('add')}</button></div>
- ${F('of',t('fabric'))}<div class="grid g2"><div>${F('od',t('due'),addDays(7),'date')}</div><div>${F('op',t('price'),'','number','inputmode="numeric"')}</div></div>${F('oa',t('advance'),'','number','inputmode="numeric"')}
+let edId='',ph='';
+function pickPhoto(inp,cb){const f=inp.files[0];if(!f)return;const im=new Image();im.onload=()=>{const k=Math.min(1,800/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);cb(c.toDataURL('image/jpeg',.65))};im.src=URL.createObjectURL(f)}
+function orderForm(cid='',eid=''){const E=eid?ord(eid):null;edId=eid;cart=E?E.items.map(i=>({...i})):[];ph=E&&E.photo||'';setTimeout(()=>{drawGp();drawCart()},0);
+ sheet(`<h2>${E?t('edit'):t('add_order')}</h2><label>${t('customer')}</label><select id="oc" ${E?'disabled':''}><option value=""></option>${[...D.c].sort((a,b)=>a.name.localeCompare(b.name)).map(c=>`<option value="${c.id}" ${c.id===(E?E.cid:cid)?'selected':''}>${esc(c.name)}</option>`).join('')}</select>
+ ${E?'':F('on',t('or_new'))}<label>${t('item')}</label><div class="gp" id="gp"></div><div style="display:grid;grid-template-columns:1fr auto;gap:10px;margin-top:10px"><input id="ci" placeholder="${t('custom')}"><button class="btn alt" onclick="addType()">+ ${t('add')}</button></div><div id="cart" style="margin-top:12px"></div>
+ ${F('of',t('fabric'),E?E.fabric:'')}<div class="grid g2"><div>${F('od',t('due'),E?E.due:addDays(7),'date')}</div><div>${F('ox',t('discount'),E&&E.disc||'','number','inputmode="numeric" oninput="totUpd()"')}</div></div>
+ <div class="stat" style="margin-top:12px"><span>${t('total')}</span> <b class="num serif" id="ct">₹0</b></div>${E?'':F('oa',t('advance'),'','number','inputmode="numeric"')}
+ <label>${t('photo')}</label><input type="file" accept="image/*" onchange="pickPhoto(this,d=>{ph=d;$('#pv').src=d;$('#pv').hidden=false})"><img id="pv" class="ph" ${ph?`src="${ph}"`:'hidden'}>
  <div class="grid g2" style="margin-top:18px"><button class="btn alt" onclick="shut()">${t('close')}</button><button class="btn" onclick="saveOrder()">${t('save')}</button></div>`)}
-async function saveOrder(){let cid=$('#oc').value;const nn=val('on'),item=selItem,price=+val('op');
- if(!item||!price||(!cid&&!nn))return toast(t('need'));
+async function saveOrder(){const E=edId?ord(edId):null;let cid=E?E.cid:$('#oc').value;const nn=E?'':val('on');
+ if(!cart.length||cart.some(i=>!(i.r>0))||(!cid&&!nn))return toast(t('need'));
  if(!cid){cid=uid();D.c.push({id:cid,name:nn,phone:'',meas:[]})}
- const a=+val('oa')||0;D.o.push({id:uid(),cid,item,fabric:val('of'),due:val('od'),price,status:'new',created:today(),pay:a>0?[{d:today(),amt:a}]:[]});shut();await commit()}
+ const f={items:cart.map(i=>({n:i.n,q:i.q,r:i.r})),fabric:val('of'),due:val('od'),disc:+val('ox')||0,photo:ph||undefined};
+ if(E){Object.assign(E,f);fix(E)}else{const a=+val('oa')||0,o={id:uid(),cid,...f,status:'wip',created:today(),pay:a>0?[{d:today(),amt:a}]:[]};fix(o);D.o.push(o)}
+ shut();await commit()}
 function openOrder(id){const o=ord(id),c=cust(o.cid),b=bal(o),ph=(c.phone||'').replace(/\D/g,'');
- const msg=encodeURIComponent(`Namaste ${c.name}, your ${o.item} balance is ${money(b)}. Thank you.`);
- sheet(`<h2>${esc(gname(o.item))}</h2><div class="sub">${esc(c.name)} ${esc(o.fabric)}</div>
+ const msg=encodeURIComponent(`Namaste ${c.name}, your ${oName(o)} balance is ${money(b)}. Thank you.`);
+ sheet(`<h2>${esc(oName(o))}</h2><div class="sub">${esc(c.name)} ${esc(o.fabric)}</div><div style="margin-top:8px">${o.items.map(i=>`<div class="sub">${esc(gname(i.n))} × ${i.q} @ ${money(i.r)} = <b>${money(i.q*i.r)}</b></div>`).join('')}<div class="sub">${t('total')}: <b>${money(o.price)}</b></div>${o.photo?`<img class="ph" src="${o.photo}">`:''}</div>
  <div class="chips" style="margin-top:14px">${ST.map(s=>`<button class="${o.status===s?'on':''}" onclick="setSt('${id}','${s}')">${t(s)}</button>`).join('')}</div>
  <div class="grid g2"><div class="stat"><span>${t('paid')}</span><b class="num serif" style="color:var(--green)">${money(paid(o))}</b></div><div class="stat"><span>${t('balance')}</span><b class="num serif" style="color:${b>0?'var(--red)':'var(--ink)'}">${money(b)}</b></div></div>
- <div class="grid g2"><div>${F('xd',t('due'),o.due,'date',`onchange="upd('${id}','due',this.value)"`)}</div><div>${F('xp',t('price'),o.price,'number',`inputmode="numeric" onchange="upd('${id}','price',+this.value)"`)}</div></div>
+ <div class="grid g2"><div>${F('xd',t('due'),o.due,'date',`onchange="upd('${id}','due',this.value)"`)}</div><div>${F('xp',t('discount'),o.disc,'number',`inputmode="numeric" onchange="upd('${id}','disc',+this.value||0)"`)}</div></div>
  <label>${t('payments')}</label>${o.pay.map(p=>`<div class="sub">${dfmt(p.d)}: <b>${money(p.amt)}</b></div>`).join('')}
  <div class="grid g2" style="margin-top:10px;align-items:end"><div>${F('pa',t('amount'),'','number','inputmode="numeric"')}</div><button class="btn" onclick="addPay('${id}')">${t('add_pay')}</button></div>
  <div class="grid g2" style="margin-top:18px">${b>0&&ph?`<a class="btn alt" style="display:grid;place-items:center;text-decoration:none" href="https://wa.me/91${ph.slice(-10)}?text=${msg}">${t('remind')}</a>`:'<span></span>'}<button class="btn alt" onclick="shut()">${t('close')}</button></div>
- <p><button class="btn red sm" onclick="delOrd('${id}')">${t('delete')}</button></p>`)}
+ <div class="grid g3" style="margin-top:12px"><button class="btn" onclick="shut();billFor(['${id}'])">${t('bill')}</button><button class="btn alt" onclick="shut();orderForm('','${id}')">${t('edit')}</button><button class="btn red" onclick="delOrd('${id}')">${t('delete')}</button></div>`)}
 async function setSt(id,s){ord(id).status=s;await save();render();openOrder(id)}
-async function upd(id,k,v){ord(id)[k]=v;await save();render();openOrder(id)}
+async function upd(id,k,v){const o=ord(id);o[k]=v;fix(o);await save();render();openOrder(id)}
 async function addPay(id){const a=+val('pa');if(!a)return;ord(id).pay.push({d:today(),amt:a});await save();render();openOrder(id)}
 async function delOrd(id){if(!confirm(t('confirm')))return;D.o=D.o.filter(o=>o.id!==id);shut();await commit()}
 function custSheet(id){const c=cust(id),m=c.meas[c.meas.length-1],os=D.o.filter(o=>o.cid===id);
  sheet(`<h2>${esc(c.name)}</h2>${c.phone?`<a href="tel:${esc(c.phone)}" style="color:var(--ink)">${esc(c.phone)}</a>`:''}
  <h3 style="margin-top:18px">${t('meas')}</h3><div class="sub">${m?t('taken')+' '+dfmt(m.d):''}</div><div class="m">${M.map(k=>`<div><label>${t(k)}</label><input id="m_${k}" type="number" inputmode="decimal" step="0.25" value="${m?esc(m.v[k]||''):''}"></div>`).join('')}</div>
  <p><button class="btn sm" onclick="saveMeas('${id}')">${t('add_meas')}</button></p>
- <h3>${t('orders_of')}</h3>${os.map(o=>`<div class="row s-${o.status}" onclick="openOrder('${o.id}')"><div><b>${esc(gname(o.item))}</b><div class="sub">${dfmt(o.due)}</div></div><span class="pill ${o.status}">${t(o.status)}</span></div>`).join('')||`<div class="sub">${t('nothing')}</div>`}
- <div class="grid g2" style="margin-top:14px"><button class="btn" onclick="shut();orderForm('${id}')">+ ${t('add_order')}</button><button class="btn alt" onclick="shut()">${t('close')}</button></div>
+ <h3>${t('orders_of')}</h3>${os.map(o=>`<div class="row s-${o.status}" onclick="openOrder('${o.id}')"><div><b>${esc(oName(o))}</b><div class="sub">${dfmt(o.due)}</div></div><span class="pill ${o.status}">${t(o.status)}</span></div>`).join('')||`<div class="sub">${t('nothing')}</div>`}
+ <p><button class="btn alt" style="width:100%" onclick="ledgerSheet('${id}')">${t('led')}</button></p><div class="grid g2" style="margin-top:14px"><button class="btn" onclick="shut();orderForm('${id}')">+ ${t('add_order')}</button><button class="btn alt" onclick="shut()">${t('close')}</button></div>
  <p><button class="btn red sm" onclick="delCust('${id}')">${t('delete')}</button></p>`)}
 async function saveMeas(id){const c=cust(id),v={};M.forEach(k=>{if($('#m_'+k).value)v[k]=$('#m_'+k).value});const e={d:today(),v},i=c.meas.findIndex(x=>x.d===e.d);if(i>=0)c.meas[i]=e;else c.meas.push(e);await save();toast('✓');custSheet(id)}
 async function delCust(id){if(D.o.some(o=>o.cid===id))return toast(t('nodel'));if(!confirm(t('confirm')))return;D.c=D.c.filter(c=>c.id!==id);shut();await commit()}
@@ -249,10 +395,11 @@ async function backup(){const name='stitchbook-backup-'+today()+'.json',blob=new
  if(navigator.canShare&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f],title:name})}catch(e){if(e.name==='AbortError')return}}
  else{const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click()}
  D.lastBackup=Date.now();await save();render();toast(t('bk_done'))}
-async function keepCurrent(){const sn=(await idbGet('snap'))||[];sn.push({day:'pre'+Date.now(),data:JSON.stringify(D)});while(sn.length>12)sn.shift();await idbSet('snap',sn)}
+async function keepCurrent(){const sn=(await idbGet('snap'))||[];sn.push({day:'pre'+Date.now(),data:JSON.stringify(D,(k,v)=>k==='photo'?undefined:v)});while(sn.length>12)sn.shift();await idbSet('snap',sn)}
 async function restoreFile(f){if(!f)return;try{const j=JSON.parse(await f.text());if(j.app!=='stitchbook'||!Array.isArray(j.data.c))throw 0;if(!confirm(t('confirm')))return;await keepCurrent();D=Object.assign({c:[],o:[],e:[],lastBackup:0},j.data);await commit();toast(t('restored'))}catch(e){toast(t('bad_file'))}}
-async function restoreSnap(day){const sn=(await idbGet('snap'))||[],s=sn.find(x=>x.day===day);if(!s||!confirm(t('confirm')))return;await keepCurrent();D=Object.assign({c:[],o:[],e:[],lastBackup:0},JSON.parse(s.data));await commit();toast(t('restored'))}
+async function restoreSnap(day){const sn=(await idbGet('snap'))||[],s=sn.find(x=>x.day===day);if(!s||!confirm(t('confirm')))return;await keepCurrent();const old=D.o;D=Object.assign({c:[],o:[],e:[],lastBackup:0},JSON.parse(s.data));D.o.forEach(o=>{const p=old.find(x=>x.id===o.id);if(p&&p.photo)o.photo=p.photo});await commit();toast(t('restored'))}
 (async()=>{let s=await idbGet('db');if(!s)s=localStorage.getItem('sb_mirror');if(s){try{D=Object.assign(D,JSON.parse(s))}catch(e){}}
+ if((D.ver||0)<VER&&(D.o.length||D.c.length)){await keepCurrent();migrate();await save()}else migrate();
  if(navigator.storage&&navigator.storage.persist)navigator.storage.persist();
- if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');render()})();
+ if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');lock();render()})();
 </script></body></html>
