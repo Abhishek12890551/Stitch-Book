@@ -3,9 +3,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Stitch Book">
-<meta name="theme-color" content="#1F2A44">
+<meta name="theme-color" content="#263c33">
 <link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icon-180.png">
-<title>Stitch Book</title>
+<title>Stitch Book · Atelier</title>
 <style>
 :root{--ink:#1F2A44;--chalk:#EDF0F3;--red:#B5304A;--brass:#B8862B;--green:#2F7D6B;--mute:#667089;--line:#D8DDE6;--tape:#F2D675;color-scheme:light}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -120,6 +120,143 @@ dialog{margin:auto auto 0;width:min(700px,100%);border-radius:28px 28px 0 0;max-
 .navq{margin-top:auto;border:1.5px solid rgba(255,255,255,.18)!important}
 .cmi{display:flex;justify-content:space-between;gap:12px;width:100%;text-align:left;min-height:54px;align-items:center;border:0;border-radius:14px;background:transparent;padding:0 16px;font:600 17px inherit;color:var(--ink)}.cmi span{color:var(--mute);font-weight:400;font-size:15px}.cmi:first-child,.cmi:active{background:#fff;box-shadow:var(--sh)}
 @media(max-width:760px){#toasts{bottom:calc(86px + env(safe-area-inset-bottom))}.navq{display:none}}
+
+/* ── Stitch Book / Atelier redesign ── */
+:root{
+ --ink:#263c33;--chalk:#f6f2ea;--red:#b86b4b;--brass:#c39b61;--green:#527b68;
+ --mute:#7b8178;--line:#e6dfd3;--tape:#e7d7b8;--paper:#fffdf8;
+ --sh:0 2px 5px rgba(38,60,51,.04),0 14px 36px rgba(38,60,51,.07);
+ color-scheme:light;
+}
+html,body{min-height:100%;background:var(--chalk);color:var(--ink)}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.55}
+h1,h2,h3,.serif{font-family:"DM Serif Display","Iowan Old Style",Georgia,serif;font-weight:400;letter-spacing:-.025em}
+h1{font-size:clamp(34px,3vw,46px);line-height:1.08}
+h1::after{width:52px;border-top:3px solid var(--red);margin-top:12px}
+h2{font-size:26px;margin:28px 0 13px}
+h3{font-family:inherit}
+.app{grid-template-columns:252px minmax(0,1fr);min-height:100vh}
+nav{
+ position:sticky;top:0;height:100vh;padding:30px 18px 22px;gap:7px;
+ background:#263c33;border:0;border-right:1px solid rgba(255,255,255,.08);
+ box-shadow:8px 0 30px rgba(38,60,51,.06)
+}
+nav .brand{color:#fffaf1;font-family:"DM Serif Display",Georgia,serif;font-size:29px;letter-spacing:-.04em;padding:8px 12px 34px;position:relative}
+nav .brand:before{content:"";display:inline-block;width:12px;height:28px;background:var(--red);border-radius:8px 8px 2px 8px;transform:rotate(18deg);margin-right:13px;vertical-align:-4px}
+nav .brand:after{content:"ATELIER MANAGEMENT";display:block;color:#b7c3b7;font:600 9px/1.4 Inter,sans-serif;letter-spacing:.2em;margin:9px 0 0 27px}
+nav button{color:#d3dbd1;font:600 14px/1.2 Inter,sans-serif;text-align:left;padding:13px 14px;border-radius:12px;min-height:48px;letter-spacing:.01em}
+nav button svg{width:19px;height:19px;margin-right:12px;opacity:.9}
+nav button.on{background:#f0e5d2;color:#263c33;box-shadow:none}
+nav button:not(.on):hover{background:rgba(255,255,255,.08);color:#fff}
+nav .navq{margin-top:auto!important;border:1px solid rgba(255,255,255,.18)!important;background:rgba(255,255,255,.04)}
+main{min-width:0;background:var(--chalk)}
+main>.tape{height:5px;background:var(--red);background-image:none}
+.pad{max-width:1500px;padding:34px 42px 100px}
+.top{margin-bottom:22px;align-items:center}
+.top .sub{margin-top:8px;font-size:14px;letter-spacing:.02em}
+.btn{min-height:48px;padding:0 20px;border:0;border-radius:11px;background:var(--ink);color:#fff;font:650 14px Inter,sans-serif;box-shadow:0 5px 14px rgba(38,60,51,.12)}
+.btn:hover{background:#345447;transform:translateY(-1px)}
+.btn.alt{background:var(--paper);color:var(--ink);border:1px solid var(--line);box-shadow:none}
+.btn.red{background:var(--red)}
+.btn.sm{min-height:38px;padding:0 13px;font-size:13px}
+input,select,textarea{min-height:48px;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);font:15px Inter,sans-serif}
+input:focus,select:focus,textarea:focus{outline:3px solid rgba(195,155,97,.2);border-color:var(--brass)}
+label{font-size:12px;font-weight:650;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:15px 0 6px}
+.grid{gap:14px}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:17px;padding:21px 22px;box-shadow:var(--sh)}
+.stat span{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mute);font-weight:700}
+.stat .num{display:block;font-size:31px;line-height:1.2;margin-top:9px;color:var(--ink)}
+.stat.big{grid-column:span 2;background:#263c33;border:0;border-radius:19px;padding:26px 28px;box-shadow:0 12px 28px rgba(38,60,51,.16)}
+.stat.big span{color:#c9d2c8}
+.stat.big .num{font-size:clamp(38px,4vw,54px);color:#f0d9b6;margin-top:12px}
+.stat.big:after{display:none}
+.row{background:var(--paper);border:1px solid var(--line);border-left:4px solid #d8d1c5;border-radius:14px;padding:15px 18px;margin-bottom:10px;box-shadow:0 3px 12px rgba(38,60,51,.035);align-items:center}
+.row.s-wip{border-left-color:var(--brass)}.row.s-kept{border-left-color:var(--green)}.row.s-delivered{border-left-color:#c9c2b4}
+.row:hover{box-shadow:var(--sh);transform:translateY(-1px)}
+.row b{font-size:15px;font-weight:700}
+.sub{font-size:13px;color:var(--mute)}
+.pill{padding:5px 10px;border-radius:7px;font-size:11px;font-weight:750;letter-spacing:.06em;text-transform:uppercase;background:#eee9df;color:#626c61}
+.pill:before{width:6px;height:6px;margin-right:6px}
+.pill.wip{background:#f3e8d3;color:#8a6532}.pill.kept{background:#e0ebe2;color:#416b54}.pill.delivered{background:#eeece7;color:#77776f}
+.chips{gap:8px;margin:14px 0 18px}
+.chips button,.gp button{min-height:39px;padding:0 15px;border-radius:9px;border:1px solid var(--line);background:var(--paper);font:650 13px Inter,sans-serif;color:var(--ink);box-shadow:none}
+.chips button.on,.gp button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.warn,.alert{border-radius:12px;padding:14px 17px;margin-bottom:16px;font-size:14px}
+.warn{background:#f4ead8;border:1px solid #e7d4b5}.alert{background:#f7edda;border:1px solid #e7d3a9;color:#765d32}
+.alert.bad{background:#f6e6e0;border-color:#e8c2b3;color:#a34f39}
+.empty{padding:40px 20px;color:var(--mute);text-align:center;background:rgba(255,253,248,.55);border:1px dashed var(--line);border-radius:14px;font-size:14px}
+.av{background:#527b68!important}
+.th{border-radius:9px}
+.bar{left:252px;background:rgba(255,253,248,.96);border-top:1px solid var(--line);backdrop-filter:blur(14px);padding:12px 30px}
+.bill{border:1px solid var(--line);border-radius:14px;background:var(--paper);box-shadow:var(--sh)}
+.bill .tape{height:7px;background:var(--red);background-image:none}
+.bill .bd{padding:22px}
+.bill td{border-bottom:1px solid #eee8dd}
+dialog{background:var(--chalk);border:1px solid rgba(38,60,51,.08);border-radius:22px 22px 0 0;box-shadow:0 24px 80px rgba(24,38,31,.25)}
+dialog::backdrop{background:rgba(22,35,29,.48);backdrop-filter:blur(5px)}
+.sh .tape{height:9px;background:var(--red);background-image:none}
+.sh .tape:after{display:none}
+.sx{top:23px;right:22px;width:40px;height:40px;background:var(--paper);box-shadow:none;border:1px solid var(--line);font-size:17px}
+.sb{padding:28px 30px 34px}
+.sb>h2:first-child{font-size:31px;margin:0 55px 4px 0}
+.sb h3{font:700 11px Inter,sans-serif;letter-spacing:.13em;color:var(--red);margin:24px 0 8px}
+.sb label{font-size:11px}
+.sb .stat{box-shadow:none}
+#lock{background:#263c33}
+#lock h1,#lock h2{color:#fff}
+#toasts{z-index:300}
+.ts{background:#263c33;border:1px solid rgba(255,255,255,.1);border-radius:12px}
+.ts button{background:#f0e5d2;color:#263c33;border-radius:8px}
+.gp{gap:7px}
+.gp button{border-radius:8px}
+.qt button{border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.ck.on{background:var(--green);border-color:var(--green)}
+.rp i{background:var(--green)}
+.lg td,.lg th{border-bottom:1px solid var(--line)}
+#main{min-width:0}
+@media(min-width:1100px){#list{grid-template-columns:1fr 1fr;gap:10px 14px}#list .row{margin:0}}
+@media(min-width:761px) and (max-width:1100px){
+ .app{grid-template-columns:210px minmax(0,1fr)}
+ nav{padding:24px 12px}
+ nav .brand{font-size:24px;padding-bottom:28px}
+ nav button{font-size:13px;padding:12px 10px}
+ nav button svg{margin-right:8px}
+ .pad{padding:28px 26px 100px}
+ .bar{left:210px}
+}
+@media(max-width:760px){
+ .app{display:block}
+ nav{position:fixed;top:auto;bottom:0;left:0;right:0;height:auto;flex-direction:row;justify-content:space-around;gap:2px;padding:7px 5px calc(7px + env(safe-area-inset-bottom));z-index:20;border:0;border-top:1px solid rgba(255,255,255,.12);box-shadow:0 -8px 28px rgba(38,60,51,.16)}
+ nav .brand{display:none}
+ nav button{flex:1;text-align:center;padding:8px 2px;min-height:51px;font-size:10px;border-radius:9px}
+ nav button svg{display:block;margin:0 auto 3px;width:18px;height:18px}
+ nav button.on{background:#f0e5d2}
+ main{padding-bottom:78px}
+ .pad{padding:22px 16px 110px}
+ h1{font-size:34px}
+ h2{font-size:23px}
+ .top{align-items:flex-start}
+ .top .btn{white-space:nowrap}
+ .g4{grid-template-columns:1fr 1fr}
+ .g3{grid-template-columns:1fr 1fr}
+ .stat{padding:16px}
+ .stat.big{grid-column:span 2;padding:20px}
+ .stat .num{font-size:26px}
+ .stat.big .num{font-size:38px}
+ .row{padding:13px 12px;gap:8px}
+ .row b{font-size:14px}
+ .bar{left:0;bottom:calc(62px + env(safe-area-inset-bottom));padding:9px 12px}
+ dialog{width:100%;max-height:94vh;border-radius:22px 22px 0 0}
+ .sh{max-height:94vh}
+ .sb{padding:24px 18px 28px}
+ .sx{top:18px;right:16px}
+ .sb>h2:first-child{font-size:27px}
+ .m{grid-template-columns:1fr 1fr}
+ .rp{grid-template-columns:56px 1fr 80px;gap:8px}
+}
+@media(max-width:390px){nav button{font-size:9px}.g3{grid-template-columns:1fr 1fr}.pad{padding-left:12px;padding-right:12px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+
 </style></head><body>
 <div class="app"><nav id="nav"></nav><main><div class="tape"></div><div class="pad" id="main"></div></main></div>
 <dialog id="dlg"></dialog><div id="lock" hidden></div><div id="toasts"></div>
